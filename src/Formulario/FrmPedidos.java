@@ -22,9 +22,29 @@ public class FrmPedidos extends javax.swing.JFrame {
     public FrmPedidos() {
         initComponents();
         this.setLocationRelativeTo(null);
-        LinhaQ.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(51,51,204)));
-      
-       
+    
+        //Colocar linha azul na borda descrição
+         linhaD.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD1.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD2.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD3.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD4.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD5.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD6.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD7.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD8.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD9.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD10.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD11.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD12.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         linhaD13.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
+         
+         
+         
+    
+         
+         //Colocar linha azul na borda und
+         
     }
 
     /**
@@ -36,128 +56,246 @@ public class FrmPedidos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        painelPrincipal = new javax.swing.JPanel();
-        btnclose = new javax.swing.JButton();
-        txtRazaoSocial = new app.bolivia.swing.JCTextField();
-        txtCNPJ = new javax.swing.JFormattedTextField();
-        txtRazaoSocial1 = new app.bolivia.swing.JCTextField();
-        jLabel1 = new javax.swing.JLabel();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        LinhaQ = new javax.swing.JTextField();
+        panelDesc = new javax.swing.JPanel();
+        linhaD = new javax.swing.JTextField();
+        linhaD1 = new javax.swing.JTextField();
+        linhaD2 = new javax.swing.JTextField();
+        linhaD3 = new javax.swing.JTextField();
+        linhaD4 = new javax.swing.JTextField();
+        linhaD5 = new javax.swing.JTextField();
+        linhaD6 = new javax.swing.JTextField();
+        linhaD7 = new javax.swing.JTextField();
+        linhaD8 = new javax.swing.JTextField();
+        linhaD9 = new javax.swing.JTextField();
+        linhaD10 = new javax.swing.JTextField();
+        linhaD11 = new javax.swing.JTextField();
+        linhaD12 = new javax.swing.JTextField();
+        linhaD13 = new javax.swing.JTextField();
+        panelVU = new javax.swing.JPanel();
+        linhaVU = new javax.swing.JTextField();
+        linhaVU1 = new javax.swing.JTextField();
+        linhaVU2 = new javax.swing.JTextField();
+        linhaVU3 = new javax.swing.JTextField();
+        linhaVU4 = new javax.swing.JTextField();
+        linhaVU5 = new javax.swing.JTextField();
+        linhaVU6 = new javax.swing.JTextField();
+        linhaVU7 = new javax.swing.JTextField();
+        linhaVU8 = new javax.swing.JTextField();
+        linhaVU9 = new javax.swing.JTextField();
+        linhaVU10 = new javax.swing.JTextField();
+        linhaVU11 = new javax.swing.JTextField();
+        linhaVU12 = new javax.swing.JTextField();
+        linhaVU13 = new javax.swing.JTextField();
+        panelVT = new javax.swing.JPanel();
+        linhaVT = new javax.swing.JTextField();
+        linhaVT1 = new javax.swing.JTextField();
+        linhaVT2 = new javax.swing.JTextField();
+        linhaVT3 = new javax.swing.JTextField();
+        linhaVT4 = new javax.swing.JTextField();
+        linhaVT5 = new javax.swing.JTextField();
+        linhaVT6 = new javax.swing.JTextField();
+        linhaVT7 = new javax.swing.JTextField();
+        linhaVT8 = new javax.swing.JTextField();
+        linhaVT9 = new javax.swing.JTextField();
+        linhaVT10 = new javax.swing.JTextField();
+        linhaVT11 = new javax.swing.JTextField();
+        linhaVT12 = new javax.swing.JTextField();
+        linhaVT13 = new javax.swing.JTextField();
+        linhaVT14 = new javax.swing.JTextField();
+        linhaVT15 = new javax.swing.JTextField();
+        linhaVT16 = new javax.swing.JTextField();
+        linhaVT17 = new javax.swing.JTextField();
+        linhaVT18 = new javax.swing.JTextField();
+        linhaVT19 = new javax.swing.JTextField();
+
+        jInternalFrame1.setVisible(true);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setName("FrmPedidos"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 600));
+        setPreferredSize(new java.awt.Dimension(700, 600));
+        getContentPane().setLayout(new java.awt.GridLayout());
 
-        painelPrincipal.setBackground(new java.awt.Color(255, 255, 255));
-        painelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane2.setBorder(null);
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(700, 500));
 
-        btnclose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/cancel_25px.png"))); // NOI18N
-        btnclose.setContentAreaFilled(false);
-        btnclose.setPreferredSize(new java.awt.Dimension(25, 25));
-        btnclose.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/cancelRED_25px.png"))); // NOI18N
-        btnclose.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncloseActionPerformed(evt);
-            }
-        });
-        painelPrincipal.add(btnclose, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 0, -1, 30));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setAutoscrolls(true);
+        jPanel1.setOpaque(false);
+        jPanel1.setPreferredSize(new java.awt.Dimension(700, 700));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        txtRazaoSocial.setBackground(new java.awt.Color(40, 66, 226));
-        txtRazaoSocial.setBorder(null);
-        txtRazaoSocial.setForeground(new java.awt.Color(255, 255, 255));
-        txtRazaoSocial.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtRazaoSocial.setDisabledTextColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtRazaoSocial.setMargin(new java.awt.Insets(3, 10, 3, 6));
-        txtRazaoSocial.setPhColor(new java.awt.Color(255, 255, 255));
-        txtRazaoSocial.setPlaceholder("E-mail");
-        txtRazaoSocial.setPreferredSize(new java.awt.Dimension(200, 25));
-        txtRazaoSocial.setSelectedTextColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial.setSelectionColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRazaoSocialActionPerformed(evt);
-            }
-        });
-        painelPrincipal.add(txtRazaoSocial, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 430, 25));
+        panelDesc.setBackground(new java.awt.Color(255, 255, 255));
+        panelDesc.setLayout(new java.awt.GridLayout(20, 1));
 
-        txtCNPJ.setBackground(new java.awt.Color(40, 66, 226));
-        txtCNPJ.setBorder(null);
-        txtCNPJ.setForeground(new java.awt.Color(255, 255, 255));
-        try {
-            txtCNPJ.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-        txtCNPJ.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtCNPJ.setText("CNPJ");
-        txtCNPJ.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCNPJActionPerformed(evt);
-            }
-        });
-        painelPrincipal.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 120, 25));
+        linhaD.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD);
 
-        txtRazaoSocial1.setBackground(new java.awt.Color(40, 66, 226));
-        txtRazaoSocial1.setBorder(null);
-        txtRazaoSocial1.setForeground(new java.awt.Color(255, 255, 255));
-        txtRazaoSocial1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtRazaoSocial1.setDisabledTextColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        txtRazaoSocial1.setMargin(new java.awt.Insets(3, 10, 3, 6));
-        txtRazaoSocial1.setPhColor(new java.awt.Color(255, 255, 255));
-        txtRazaoSocial1.setPlaceholder(" Razão Social");
-        txtRazaoSocial1.setPreferredSize(new java.awt.Dimension(200, 25));
-        txtRazaoSocial1.setSelectedTextColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial1.setSelectionColor(new java.awt.Color(0, 0, 204));
-        txtRazaoSocial1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtRazaoSocial1ActionPerformed(evt);
-            }
-        });
-        painelPrincipal.add(txtRazaoSocial1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 560, 25));
+        linhaD1.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD1);
 
-        jLabel1.setFont(new java.awt.Font("Franklin Gothic Medium", 3, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(40, 66, 226));
-        jLabel1.setText("Fornecedor:");
-        painelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        linhaD2.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD2);
 
-        jPanel1.setLayout(new java.awt.GridLayout(20, 5, 3, 3));
+        linhaD3.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD3);
 
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2);
+        linhaD4.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD4);
 
-        LinhaQ.setFocusable(false);
-        LinhaQ.setPreferredSize(new java.awt.Dimension(6, 40));
-        jPanel1.add(LinhaQ);
+        linhaD5.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD5);
 
-        painelPrincipal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 560, 480));
+        linhaD6.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD6);
 
-        getContentPane().add(painelPrincipal, java.awt.BorderLayout.CENTER);
+        linhaD7.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD7);
+
+        linhaD8.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD8);
+
+        linhaD9.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD9);
+
+        linhaD10.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD10);
+
+        linhaD11.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD11);
+
+        linhaD12.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD12);
+
+        linhaD13.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelDesc.add(linhaD13);
+
+        jPanel1.add(panelDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 400, 700));
+
+        panelVU.setBackground(new java.awt.Color(255, 255, 255));
+        panelVU.setLayout(new java.awt.GridLayout(20, 1));
+
+        linhaVU.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU);
+
+        linhaVU1.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU1);
+
+        linhaVU2.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU2);
+
+        linhaVU3.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU3);
+
+        linhaVU4.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU4);
+
+        linhaVU5.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU5);
+
+        linhaVU6.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU6);
+
+        linhaVU7.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU7);
+
+        linhaVU8.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU8);
+
+        linhaVU9.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU9);
+
+        linhaVU10.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU10);
+
+        linhaVU11.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU11);
+
+        linhaVU12.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU12);
+
+        linhaVU13.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVU.add(linhaVU13);
+
+        jPanel1.add(panelVU, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 50, 700));
+
+        panelVT.setBackground(new java.awt.Color(255, 255, 255));
+        panelVT.setLayout(new java.awt.GridLayout(20, 0));
+
+        linhaVT.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT);
+
+        linhaVT1.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT1);
+
+        linhaVT2.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT2);
+
+        linhaVT3.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT3);
+
+        linhaVT4.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT4);
+
+        linhaVT5.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT5);
+
+        linhaVT6.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT6);
+
+        linhaVT7.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT7);
+
+        linhaVT8.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT8);
+
+        linhaVT9.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT9);
+
+        linhaVT10.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT10);
+
+        linhaVT11.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT11);
+
+        linhaVT12.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT12);
+
+        linhaVT13.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT13);
+
+        linhaVT14.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT14);
+
+        linhaVT15.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT15);
+
+        linhaVT16.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT16);
+
+        linhaVT17.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT17);
+
+        linhaVT18.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT18);
+
+        linhaVT19.setPreferredSize(new java.awt.Dimension(400, 15));
+        panelVT.add(linhaVT19);
+
+        jPanel1.add(panelVT, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 50, 700));
+
+        jScrollPane2.setViewportView(jPanel1);
+
+        getContentPane().add(jScrollPane2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
-       dispose();
-    }//GEN-LAST:event_btncloseActionPerformed
-
-    private void txtRazaoSocialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRazaoSocialActionPerformed
-       txtRazaoSocial.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, new Color(0,0,204)));
-    txtRazaoSocial.setFont(new Font("Century Gothic", Font.BOLD, 18));
-    }//GEN-LAST:event_txtRazaoSocialActionPerformed
-
-    private void txtCNPJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCNPJActionPerformed
-        
-
-    }//GEN-LAST:event_txtCNPJActionPerformed
-
-    private void txtRazaoSocial1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRazaoSocial1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtRazaoSocial1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,14 +331,59 @@ public class FrmPedidos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField LinhaQ;
-    private javax.swing.JButton btnclose;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel painelPrincipal;
-    private javax.swing.JFormattedTextField txtCNPJ;
-    public app.bolivia.swing.JCTextField txtRazaoSocial;
-    public app.bolivia.swing.JCTextField txtRazaoSocial1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField linhaD;
+    private javax.swing.JTextField linhaD1;
+    private javax.swing.JTextField linhaD10;
+    private javax.swing.JTextField linhaD11;
+    private javax.swing.JTextField linhaD12;
+    private javax.swing.JTextField linhaD13;
+    private javax.swing.JTextField linhaD2;
+    private javax.swing.JTextField linhaD3;
+    private javax.swing.JTextField linhaD4;
+    private javax.swing.JTextField linhaD5;
+    private javax.swing.JTextField linhaD6;
+    private javax.swing.JTextField linhaD7;
+    private javax.swing.JTextField linhaD8;
+    private javax.swing.JTextField linhaD9;
+    private javax.swing.JTextField linhaVT;
+    private javax.swing.JTextField linhaVT1;
+    private javax.swing.JTextField linhaVT10;
+    private javax.swing.JTextField linhaVT11;
+    private javax.swing.JTextField linhaVT12;
+    private javax.swing.JTextField linhaVT13;
+    private javax.swing.JTextField linhaVT14;
+    private javax.swing.JTextField linhaVT15;
+    private javax.swing.JTextField linhaVT16;
+    private javax.swing.JTextField linhaVT17;
+    private javax.swing.JTextField linhaVT18;
+    private javax.swing.JTextField linhaVT19;
+    private javax.swing.JTextField linhaVT2;
+    private javax.swing.JTextField linhaVT3;
+    private javax.swing.JTextField linhaVT4;
+    private javax.swing.JTextField linhaVT5;
+    private javax.swing.JTextField linhaVT6;
+    private javax.swing.JTextField linhaVT7;
+    private javax.swing.JTextField linhaVT8;
+    private javax.swing.JTextField linhaVT9;
+    private javax.swing.JTextField linhaVU;
+    private javax.swing.JTextField linhaVU1;
+    private javax.swing.JTextField linhaVU10;
+    private javax.swing.JTextField linhaVU11;
+    private javax.swing.JTextField linhaVU12;
+    private javax.swing.JTextField linhaVU13;
+    private javax.swing.JTextField linhaVU2;
+    private javax.swing.JTextField linhaVU3;
+    private javax.swing.JTextField linhaVU4;
+    private javax.swing.JTextField linhaVU5;
+    private javax.swing.JTextField linhaVU6;
+    private javax.swing.JTextField linhaVU7;
+    private javax.swing.JTextField linhaVU8;
+    private javax.swing.JTextField linhaVU9;
+    private javax.swing.JPanel panelDesc;
+    private javax.swing.JPanel panelVT;
+    private javax.swing.JPanel panelVU;
     // End of variables declaration//GEN-END:variables
 }
