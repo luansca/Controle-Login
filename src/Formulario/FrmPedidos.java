@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
+import javax.swing.UIManager;
 
 /**
  *
@@ -22,23 +23,16 @@ public class FrmPedidos extends javax.swing.JFrame {
     public FrmPedidos() {
         initComponents();
         this.setLocationRelativeTo(null);
-    
+        table.getTableHeader().setOpaque(false);
+        table.getTableHeader().setBackground(Color.white);
+        txtRazao.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtCNPJ.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtTel.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtEmail.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtVendedor.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtNum.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtEnde.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
         //Colocar linha azul na borda descrição
-         linhaD.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD1.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD2.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD3.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD4.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD5.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD6.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD7.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD8.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD9.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD10.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD11.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD12.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         linhaD13.setBorder(BorderFactory.createMatteBorder (0,0,2,0, Color.blue));
-         
          
          
     
@@ -58,58 +52,18 @@ public class FrmPedidos extends javax.swing.JFrame {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        panelDesc = new javax.swing.JPanel();
-        linhaD = new javax.swing.JTextField();
-        linhaD1 = new javax.swing.JTextField();
-        linhaD2 = new javax.swing.JTextField();
-        linhaD3 = new javax.swing.JTextField();
-        linhaD4 = new javax.swing.JTextField();
-        linhaD5 = new javax.swing.JTextField();
-        linhaD6 = new javax.swing.JTextField();
-        linhaD7 = new javax.swing.JTextField();
-        linhaD8 = new javax.swing.JTextField();
-        linhaD9 = new javax.swing.JTextField();
-        linhaD10 = new javax.swing.JTextField();
-        linhaD11 = new javax.swing.JTextField();
-        linhaD12 = new javax.swing.JTextField();
-        linhaD13 = new javax.swing.JTextField();
-        panelVU = new javax.swing.JPanel();
-        linhaVU = new javax.swing.JTextField();
-        linhaVU1 = new javax.swing.JTextField();
-        linhaVU2 = new javax.swing.JTextField();
-        linhaVU3 = new javax.swing.JTextField();
-        linhaVU4 = new javax.swing.JTextField();
-        linhaVU5 = new javax.swing.JTextField();
-        linhaVU6 = new javax.swing.JTextField();
-        linhaVU7 = new javax.swing.JTextField();
-        linhaVU8 = new javax.swing.JTextField();
-        linhaVU9 = new javax.swing.JTextField();
-        linhaVU10 = new javax.swing.JTextField();
-        linhaVU11 = new javax.swing.JTextField();
-        linhaVU12 = new javax.swing.JTextField();
-        linhaVU13 = new javax.swing.JTextField();
-        panelVT = new javax.swing.JPanel();
-        linhaVT = new javax.swing.JTextField();
-        linhaVT1 = new javax.swing.JTextField();
-        linhaVT2 = new javax.swing.JTextField();
-        linhaVT3 = new javax.swing.JTextField();
-        linhaVT4 = new javax.swing.JTextField();
-        linhaVT5 = new javax.swing.JTextField();
-        linhaVT6 = new javax.swing.JTextField();
-        linhaVT7 = new javax.swing.JTextField();
-        linhaVT8 = new javax.swing.JTextField();
-        linhaVT9 = new javax.swing.JTextField();
-        linhaVT10 = new javax.swing.JTextField();
-        linhaVT11 = new javax.swing.JTextField();
-        linhaVT12 = new javax.swing.JTextField();
-        linhaVT13 = new javax.swing.JTextField();
-        linhaVT14 = new javax.swing.JTextField();
-        linhaVT15 = new javax.swing.JTextField();
-        linhaVT16 = new javax.swing.JTextField();
-        linhaVT17 = new javax.swing.JTextField();
-        linhaVT18 = new javax.swing.JTextField();
-        linhaVT19 = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        txtVendedor = new app.bolivia.swing.JCTextField();
+        txtEnde = new app.bolivia.swing.JCTextField();
+        txtEmail = new app.bolivia.swing.JCTextField();
+        txtRazao = new app.bolivia.swing.JCTextField();
+        txtTel = new javax.swing.JFormattedTextField();
+        txtCNPJ = new javax.swing.JFormattedTextField();
+        cBox = new javax.swing.JComboBox<>();
+        txtNum = new app.bolivia.swing.JCTextField();
+        btnSair = new javax.swing.JButton();
 
         jInternalFrame1.setVisible(true);
 
@@ -117,185 +71,175 @@ public class FrmPedidos extends javax.swing.JFrame {
         setBackground(new java.awt.Color(255, 255, 255));
         setName("FrmPedidos"); // NOI18N
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(700, 600));
-        getContentPane().setLayout(new java.awt.GridLayout());
+        setPreferredSize(new java.awt.Dimension(680, 600));
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jScrollPane2.setBackground(new java.awt.Color(255, 255, 255));
         jScrollPane2.setBorder(null);
         jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane2.setPreferredSize(new java.awt.Dimension(700, 500));
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(650, 500));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setAutoscrolls(true);
-        jPanel1.setOpaque(false);
-        jPanel1.setPreferredSize(new java.awt.Dimension(700, 700));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setToolTipText("");
+        jPanel2.setDoubleBuffered(false);
+        jPanel2.setPreferredSize(new java.awt.Dimension(700, 800));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        panelDesc.setBackground(new java.awt.Color(255, 255, 255));
-        panelDesc.setLayout(new java.awt.GridLayout(20, 1));
+        table.setAutoCreateRowSorter(true);
+        table.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Qtde.", "Und.", "Descrição", "Valor Un.", "Valor Total"
+            }
+        ));
+        table.setGridColor(javax.swing.UIManager.getDefaults().getColor("Button.background"));
+        table.setOpaque(false);
+        table.setSelectionBackground(new java.awt.Color(204, 204, 255));
+        jScrollPane1.setViewportView(table);
+        if (table.getColumnModel().getColumnCount() > 0) {
+            table.getColumnModel().getColumn(0).setPreferredWidth(50);
+            table.getColumnModel().getColumn(1).setPreferredWidth(50);
+            table.getColumnModel().getColumn(2).setPreferredWidth(500);
+            table.getColumnModel().getColumn(3).setPreferredWidth(100);
+            table.getColumnModel().getColumn(4).setPreferredWidth(100);
+        }
 
-        linhaD.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD);
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 240, 640, -1));
 
-        linhaD1.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD1);
+        txtVendedor.setBorder(null);
+        txtVendedor.setPlaceholder("Vendedor");
+        txtVendedor.setPreferredSize(new java.awt.Dimension(200, 25));
+        txtVendedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtVendedorActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 130, -1));
 
-        linhaD2.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD2);
+        txtEnde.setBorder(null);
+        txtEnde.setPlaceholder("Endereço");
+        txtEnde.setPreferredSize(new java.awt.Dimension(200, 25));
+        txtEnde.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEndeActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtEnde, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 130, -1));
 
-        linhaD3.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD3);
+        txtEmail.setBorder(null);
+        txtEmail.setPlaceholder("E-mail");
+        txtEmail.setPreferredSize(new java.awt.Dimension(200, 25));
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, 170, -1));
 
-        linhaD4.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD4);
+        txtRazao.setBorder(null);
+        txtRazao.setPlaceholder("Razão Social");
+        txtRazao.setPreferredSize(new java.awt.Dimension(200, 25));
+        txtRazao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRazaoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(txtRazao, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 450, -1));
 
-        linhaD5.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD5);
+        txtTel.setBorder(null);
+        try {
+            txtTel.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) #####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtTel.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtTel.setPreferredSize(new java.awt.Dimension(109, 25));
+        jPanel2.add(txtTel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 170, 130, 25));
 
-        linhaD6.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD6);
+        txtCNPJ.setBorder(null);
+        try {
+            txtCNPJ.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##.###.###/####-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtCNPJ.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtCNPJ.setPreferredSize(new java.awt.Dimension(109, 25));
+        jPanel2.add(txtCNPJ, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 130, 25));
 
-        linhaD7.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD7);
+        cBox.setEditable(true);
+        cBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rua", "Av.", "Trv." }));
+        cBox.setBorder(null);
+        cBox.setOpaque(false);
+        jPanel2.add(cBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 50, 25));
 
-        linhaD8.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD8);
+        txtNum.setBorder(null);
+        txtNum.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtNum.setPlaceholder("Núm.");
+        jPanel2.add(txtNum, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 170, 40, 25));
 
-        linhaD9.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD9);
+        btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/iconSair35px.png"))); // NOI18N
+        btnSair.setContentAreaFilled(false);
+        btnSair.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/iconSairRed35px.png"))); // NOI18N
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(617, 0, 40, -1));
 
-        linhaD10.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD10);
-
-        linhaD11.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD11);
-
-        linhaD12.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD12);
-
-        linhaD13.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelDesc.add(linhaD13);
-
-        jPanel1.add(panelDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 400, 700));
-
-        panelVU.setBackground(new java.awt.Color(255, 255, 255));
-        panelVU.setLayout(new java.awt.GridLayout(20, 1));
-
-        linhaVU.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU);
-
-        linhaVU1.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU1);
-
-        linhaVU2.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU2);
-
-        linhaVU3.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU3);
-
-        linhaVU4.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU4);
-
-        linhaVU5.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU5);
-
-        linhaVU6.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU6);
-
-        linhaVU7.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU7);
-
-        linhaVU8.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU8);
-
-        linhaVU9.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU9);
-
-        linhaVU10.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU10);
-
-        linhaVU11.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU11);
-
-        linhaVU12.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU12);
-
-        linhaVU13.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVU.add(linhaVU13);
-
-        jPanel1.add(panelVU, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, 50, 700));
-
-        panelVT.setBackground(new java.awt.Color(255, 255, 255));
-        panelVT.setLayout(new java.awt.GridLayout(20, 0));
-
-        linhaVT.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT);
-
-        linhaVT1.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT1);
-
-        linhaVT2.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT2);
-
-        linhaVT3.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT3);
-
-        linhaVT4.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT4);
-
-        linhaVT5.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT5);
-
-        linhaVT6.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT6);
-
-        linhaVT7.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT7);
-
-        linhaVT8.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT8);
-
-        linhaVT9.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT9);
-
-        linhaVT10.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT10);
-
-        linhaVT11.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT11);
-
-        linhaVT12.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT12);
-
-        linhaVT13.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT13);
-
-        linhaVT14.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT14);
-
-        linhaVT15.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT15);
-
-        linhaVT16.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT16);
-
-        linhaVT17.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT17);
-
-        linhaVT18.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT18);
-
-        linhaVT19.setPreferredSize(new java.awt.Dimension(400, 15));
-        panelVT.add(linhaVT19);
-
-        jPanel1.add(panelVT, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 50, 700));
-
-        jScrollPane2.setViewportView(jPanel1);
+        jScrollPane2.setViewportView(jPanel2);
 
         getContentPane().add(jScrollPane2);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtRazaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRazaoActionPerformed
+      
+    }//GEN-LAST:event_txtRazaoActionPerformed
+
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void txtEndeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEndeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEndeActionPerformed
+
+    private void txtVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVendedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtVendedorActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -331,59 +275,19 @@ public class FrmPedidos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnSair;
+    private javax.swing.JComboBox<String> cBox;
     private javax.swing.JInternalFrame jInternalFrame1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField linhaD;
-    private javax.swing.JTextField linhaD1;
-    private javax.swing.JTextField linhaD10;
-    private javax.swing.JTextField linhaD11;
-    private javax.swing.JTextField linhaD12;
-    private javax.swing.JTextField linhaD13;
-    private javax.swing.JTextField linhaD2;
-    private javax.swing.JTextField linhaD3;
-    private javax.swing.JTextField linhaD4;
-    private javax.swing.JTextField linhaD5;
-    private javax.swing.JTextField linhaD6;
-    private javax.swing.JTextField linhaD7;
-    private javax.swing.JTextField linhaD8;
-    private javax.swing.JTextField linhaD9;
-    private javax.swing.JTextField linhaVT;
-    private javax.swing.JTextField linhaVT1;
-    private javax.swing.JTextField linhaVT10;
-    private javax.swing.JTextField linhaVT11;
-    private javax.swing.JTextField linhaVT12;
-    private javax.swing.JTextField linhaVT13;
-    private javax.swing.JTextField linhaVT14;
-    private javax.swing.JTextField linhaVT15;
-    private javax.swing.JTextField linhaVT16;
-    private javax.swing.JTextField linhaVT17;
-    private javax.swing.JTextField linhaVT18;
-    private javax.swing.JTextField linhaVT19;
-    private javax.swing.JTextField linhaVT2;
-    private javax.swing.JTextField linhaVT3;
-    private javax.swing.JTextField linhaVT4;
-    private javax.swing.JTextField linhaVT5;
-    private javax.swing.JTextField linhaVT6;
-    private javax.swing.JTextField linhaVT7;
-    private javax.swing.JTextField linhaVT8;
-    private javax.swing.JTextField linhaVT9;
-    private javax.swing.JTextField linhaVU;
-    private javax.swing.JTextField linhaVU1;
-    private javax.swing.JTextField linhaVU10;
-    private javax.swing.JTextField linhaVU11;
-    private javax.swing.JTextField linhaVU12;
-    private javax.swing.JTextField linhaVU13;
-    private javax.swing.JTextField linhaVU2;
-    private javax.swing.JTextField linhaVU3;
-    private javax.swing.JTextField linhaVU4;
-    private javax.swing.JTextField linhaVU5;
-    private javax.swing.JTextField linhaVU6;
-    private javax.swing.JTextField linhaVU7;
-    private javax.swing.JTextField linhaVU8;
-    private javax.swing.JTextField linhaVU9;
-    private javax.swing.JPanel panelDesc;
-    private javax.swing.JPanel panelVT;
-    private javax.swing.JPanel panelVU;
+    private javax.swing.JTable table;
+    private javax.swing.JFormattedTextField txtCNPJ;
+    private app.bolivia.swing.JCTextField txtEmail;
+    private app.bolivia.swing.JCTextField txtEnde;
+    private app.bolivia.swing.JCTextField txtNum;
+    private app.bolivia.swing.JCTextField txtRazao;
+    private javax.swing.JFormattedTextField txtTel;
+    private app.bolivia.swing.JCTextField txtVendedor;
     // End of variables declaration//GEN-END:variables
 }
