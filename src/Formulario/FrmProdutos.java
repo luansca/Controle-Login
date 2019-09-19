@@ -12,6 +12,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.BorderFactory;
 import javax.swing.table.DefaultTableModel;
+import TelaLogin.Login;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
 
 
 /**
@@ -28,13 +31,13 @@ public class FrmProdutos extends javax.swing.JFrame {
     public FrmProdutos() {
         initComponents();
     
+       
         
-        
-        // txtCod.setBackground(new Color(0,51,204));
+        txtCod.setBackground(new Color(0,51,204));
         this.setLocationRelativeTo(null);
-        table.getTableHeader().setOpaque(false);
-        table.getTableHeader().setBackground(Color.white);
-       // txtData.setBackground(new Color(0,51,204));
+        /*table.getTableHeader().setOpaque(false);
+        table.getTableHeader().setBackground(Color.white);*/
+         txtData.setBackground(new Color(0,51,204));
         razaoBF.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
         txtRazao.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
         txtCNPJ.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
@@ -46,10 +49,13 @@ public class FrmProdutos extends javax.swing.JFrame {
         txtEndeBF.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
         txtTelBF.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
         txtCNPJBF.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
-       
-               
-    }
-
+        txtQtde.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtUnd.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtDescricao.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtValorUN.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+        txtValorTotal.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, Color.blue));
+      }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -85,19 +91,20 @@ public class FrmProdutos extends javax.swing.JFrame {
         lblEndeBF2 = new javax.swing.JLabel();
         txtTelBF = new javax.swing.JFormattedTextField();
         txtCNPJBF = new javax.swing.JFormattedTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        table = new javax.swing.JTable();
-        btnadd = new javax.swing.JButton();
         btnSalvar = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
-        txtUnd = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        table = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        txtDescricao = new javax.swing.JTextField();
         txtQtde = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
-        valorUN = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        txtValorUN = new javax.swing.JTextField();
+        txtValorTotal = new javax.swing.JTextField();
+        txtUnd = new javax.swing.JComboBox<>();
+        btnAdd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(715, 700));
+        setPreferredSize(new java.awt.Dimension(750, 700));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -122,7 +129,7 @@ public class FrmProdutos extends javax.swing.JFrame {
         top.add(txtCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 60, 25));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/logo-fundo-transparente-2.png"))); // NOI18N
-        top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+        top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 0, -1, -1));
 
         txtHora.setBackground(new java.awt.Color(0, 51, 204));
         txtHora.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -130,7 +137,7 @@ public class FrmProdutos extends javax.swing.JFrame {
         txtHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtHora.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         txtHora.setOpaque(true);
-        top.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, 90, 25));
+        top.add(txtHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 90, 25));
 
         txtData.setBackground(new java.awt.Color(0, 51, 204));
         txtData.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
@@ -138,7 +145,7 @@ public class FrmProdutos extends javax.swing.JFrame {
         txtData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtData.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         txtData.setOpaque(true);
-        top.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 90, 25));
+        top.add(txtData, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 70, 90, 25));
 
         central.add(top, java.awt.BorderLayout.PAGE_START);
 
@@ -175,7 +182,7 @@ public class FrmProdutos extends javax.swing.JFrame {
                 txtEndeActionPerformed(evt);
             }
         });
-        jPanel1.add(txtEnde, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 20, 160, -1));
+        jPanel1.add(txtEnde, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 20, 180, -1));
 
         txtRazao.setBorder(null);
         txtRazao.setForeground(new java.awt.Color(0, 0, 204));
@@ -236,9 +243,9 @@ public class FrmProdutos extends javax.swing.JFrame {
                 txtVendedorActionPerformed(evt);
             }
         });
-        jPanel1.add(txtVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 160, -1));
+        jPanel1.add(txtVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 60, 190, -1));
 
-        panelCentraldoScroll.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 660, 100));
+        panelCentraldoScroll.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 700, 100));
 
         panelDados.setBackground(new java.awt.Color(255, 255, 255));
         panelDados.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Dados da Empresa:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 3, 14), new java.awt.Color(0, 51, 255))); // NOI18N
@@ -338,64 +345,9 @@ public class FrmProdutos extends javax.swing.JFrame {
         txtCNPJBF.setText("04.227.147/0001-70");
         txtCNPJBF.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         txtCNPJBF.setPreferredSize(new java.awt.Dimension(109, 25));
-        panelDados.add(txtCNPJBF, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 120, -1));
+        panelDados.add(txtCNPJBF, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 20, 120, -1));
 
-        panelCentraldoScroll.add(panelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 660, 100));
-
-        jScrollPane1.setBorder(null);
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setOpaque(false);
-
-        table.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        table.setForeground(new java.awt.Color(0, 51, 204));
-        table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Qtde.", "Und.", "Descrição", "Valor Un.", "Valor Total"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class, java.lang.Object.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        table.setCellSelectionEnabled(true);
-        table.setDoubleBuffered(true);
-        table.setDragEnabled(true);
-        table.setGridColor(javax.swing.UIManager.getDefaults().getColor("Button.background"));
-        table.setIntercellSpacing(new java.awt.Dimension(4, 4));
-        table.setRowHeight(25);
-        table.setSelectionBackground(new java.awt.Color(255, 255, 255));
-        table.setSelectionForeground(new java.awt.Color(204, 204, 204));
-        table.setVerifyInputWhenFocusTarget(false);
-        jScrollPane1.setViewportView(table);
-        table.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-        if (table.getColumnModel().getColumnCount() > 0) {
-            table.getColumnModel().getColumn(0).setPreferredWidth(40);
-            table.getColumnModel().getColumn(1).setPreferredWidth(40);
-            table.getColumnModel().getColumn(2).setMinWidth(400);
-            table.getColumnModel().getColumn(2).setPreferredWidth(400);
-            table.getColumnModel().getColumn(2).setMaxWidth(400);
-            table.getColumnModel().getColumn(3).setPreferredWidth(50);
-            table.getColumnModel().getColumn(4).setPreferredWidth(60);
-        }
-
-        panelCentraldoScroll.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 307, 660, 390));
-
-        btnadd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/add_file_32px.png"))); // NOI18N
-        btnadd.setContentAreaFilled(false);
-        btnadd.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/add_file_edit32px.png"))); // NOI18N
-        btnadd.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddActionPerformed(evt);
-            }
-        });
-        panelCentraldoScroll.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 30, 40));
+        panelCentraldoScroll.add(panelDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 700, 100));
 
         btnSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/save_32bluepx.png"))); // NOI18N
         btnSalvar.setContentAreaFilled(false);
@@ -404,7 +356,7 @@ public class FrmProdutos extends javax.swing.JFrame {
                 btnSalvarActionPerformed(evt);
             }
         });
-        panelCentraldoScroll.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 30, -1));
+        panelCentraldoScroll.add(btnSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 30, -1));
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/print_32px.png"))); // NOI18N
         btnImprimir.setContentAreaFilled(false);
@@ -413,22 +365,82 @@ public class FrmProdutos extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
-        panelCentraldoScroll.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 30, -1));
+        panelCentraldoScroll.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 30, -1));
 
-        txtUnd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        panelCentraldoScroll.add(txtUnd, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 30, 25));
+        table.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Qtde.", "Und.", "Descrição", "Valor Un.", "Valor Total"
+            }
+        ));
+        table.setFillsViewportHeight(true);
+        table.setRowHeight(25);
+        jScrollPane2.setViewportView(table);
+
+        panelCentraldoScroll.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 427, 700, 320));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(null, "Adicionar Produtos:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 2, 12), new java.awt.Color(0, 0, 51)), "Adicionar Produtos:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial Black", 2, 12), new java.awt.Color(0, 51, 204))); // NOI18N
+        jPanel2.setOpaque(false);
 
         txtQtde.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        panelCentraldoScroll.add(txtQtde, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 30, 25));
-        panelCentraldoScroll.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 450, 25));
+        txtQtde.setOpaque(false);
 
-        valorUN.addActionListener(new java.awt.event.ActionListener() {
+        txtValorUN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorUNActionPerformed(evt);
+                txtValorUNActionPerformed(evt);
             }
         });
-        panelCentraldoScroll.add(valorUN, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, 50, 25));
-        panelCentraldoScroll.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, 50, 25));
+
+        txtUnd.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        txtUnd.setForeground(new java.awt.Color(0, 51, 204));
+        txtUnd.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "UND", "PC", "FD", "GL", "M", "CM", " " }));
+        txtUnd.setBorder(null);
+        txtUnd.setLightWeightPopupEnabled(false);
+        txtUnd.setOpaque(false);
+        txtUnd.setPreferredSize(new java.awt.Dimension(40, 25));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(txtQtde, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtUnd, 0, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtValorUN, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtValorUN, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtValorTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtQtde, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtUnd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        panelCentraldoScroll.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 690, 90));
+
+        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/add_file_32px.png"))); // NOI18N
+        btnAdd.setContentAreaFilled(false);
+        btnAdd.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconLogin/add_file_edit32px.png"))); // NOI18N
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+        panelCentraldoScroll.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 380, 30, 40));
 
         panelDosDados.setViewportView(panelCentraldoScroll);
 
@@ -486,19 +498,32 @@ public class FrmProdutos extends javax.swing.JFrame {
     
     }//GEN-LAST:event_btnImprimirActionPerformed
 
-    private void valorUNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorUNActionPerformed
+    private void txtValorUNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorUNActionPerformed
       
     
-    }//GEN-LAST:event_valorUNActionPerformed
+    }//GEN-LAST:event_txtValorUNActionPerformed
 
-    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
-        String qtd = txtQtde.getText().trim();
-        String un = valorUN.getText().trim();
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+      
        
 
-        DefaultTableModel val = (DefaultTableModel) table.getModel();
-        val.addRow() String[] {txtQtde});
-    }//GEN-LAST:event_btnaddActionPerformed
+        
+        String qtd = txtQtde.getText().trim();
+       String und = (String) txtUnd.getSelectedItem();
+       String desc = txtDescricao.getText().trim();
+       String un = txtValorUN.getText().trim();
+       String total = txtValorTotal.getText().trim();
+       
+       DefaultTableModel mod = (DefaultTableModel)this.table.getModel();
+        
+       mod.addRow(new Object[] {this.txtQtde.getText(), this.txtUnd.getSelectedItem(), this.txtDescricao.getText(), this.txtValorUN.getText(), this.txtValorTotal.getText()});
+        
+       txtQtde.setText("");
+       txtUnd.setSelectedItem("");
+       txtDescricao.setText("");
+       txtValorUN.setText("");
+       txtValorTotal.setText("");
+    }//GEN-LAST:event_btnAddActionPerformed
 
     /**
      * @param args the command line arguments
@@ -537,16 +562,15 @@ public class FrmProdutos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
     private static javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JButton btnadd;
     private javax.swing.JComboBox<String> cBox;
     private javax.swing.JPanel central;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblCNPJ;
     private javax.swing.JLabel lblEndeBF;
     private javax.swing.JLabel lblEndeBF2;
@@ -561,6 +585,7 @@ public class FrmProdutos extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField txtCNPJBF;
     private app.bolivia.swing.JCTextField txtCod;
     private javax.swing.JLabel txtData;
+    private javax.swing.JTextField txtDescricao;
     private app.bolivia.swing.JCTextField txtEmail;
     private app.bolivia.swing.JCTextField txtEnde;
     private app.bolivia.swing.JCTextField txtEndeBF;
@@ -570,9 +595,10 @@ public class FrmProdutos extends javax.swing.JFrame {
     private app.bolivia.swing.JCTextField txtRazao;
     private javax.swing.JFormattedTextField txtTel;
     private javax.swing.JFormattedTextField txtTelBF;
-    private javax.swing.JTextField txtUnd;
+    private javax.swing.JComboBox<String> txtUnd;
+    private javax.swing.JTextField txtValorTotal;
+    private javax.swing.JTextField txtValorUN;
     private app.bolivia.swing.JCTextField txtVendedor;
-    private javax.swing.JTextField valorUN;
     // End of variables declaration//GEN-END:variables
 
    

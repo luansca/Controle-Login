@@ -5,7 +5,7 @@
  */
 package MenuPrincipal;
 
-import Formulario.FrmPedidos;
+
 import java.awt.Color;
 import java.awt.Component;
 
@@ -201,8 +201,8 @@ public class TelaMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnCompActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompActionPerformed
-        Component pedidos = new FrmPedidos();
-        pedidos.setVisible(true);
+       
+        
                 
     }//GEN-LAST:event_btnCompActionPerformed
 

@@ -325,11 +325,5 @@ public class Login extends javax.swing.JFrame {
     private app.bolivia.swing.JCTextField txtusuario;
     // End of variables declaration//GEN-END:variables
 
-    private Color Color(int i, int i0, int i1, int i2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setIconifiable(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
